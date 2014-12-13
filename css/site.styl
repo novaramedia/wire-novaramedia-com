@@ -1,0 +1,374 @@
+@import "resets"
+@import "novara"
+
+
+// HEADER
+
+#header
+  background-image: url(../img/wire-marble.jpg)
+
+#logo-wire
+  height: 55px
+  width: 100px
+
+
+// INDEX
+
+.post
+  margin-bottom: $margin-basic
+  padding-bottom: $margin-small
+
+.post-header
+  position: relative
+  margin-bottom: $margin-small
+  &:hover
+    .post-title-index
+      background: rgba($blueRGB,0.8)
+
+.post-title-index
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 100%
+  box-sizing: border-box
+  padding: $margin-small
+  background: linear-gradient(to bottom, rgba(100,100,100,0.4) 0%,rgba(100,100,100,0) 100%)
+
+#pagination
+  margin: $margin-basic 0
+
+
+// HOME
+
+.home-novaramedia
+  padding: $margin-basic 0
+  margin: $margin-small 0 $margin-basic 0
+
+.novara-posts-title
+  margin-bottom: $margin-basic
+
+.novara-post-title
+  margin-top: $margin-small
+
+// SINGLE POST
+
+.post-author
+  margin-top: $margin-small
+
+#single-post-header
+  background-size: cover
+  background-position: center center
+
+#single-post-header-inner
+  padding: $margin-basic 0
+  background-color: rgba(100,100,100,0.5)
+
+#single-post-social
+  padding-top: $margin-basic
+
+#single-post-copy
+  margin-top: $margin-basic
+
+.font-readable
+	a
+		color: $blue
+  iframe
+    max-width: 100%
+    width: 100%
+
+.list-posts
+  margin-top: $margin-small
+  li
+    margin-bottom: $margin-small
+    &:hover
+      color: $blue
+
+#single-post-footer
+	margin: $margin-basic 0
+
+.single-post-footer-social, .single-post-footer-meta
+  width: 50%
+  float: left
+
+.single-post-footer-social
+  text-align: center
+  margin-bottom: $margin-basic
+
+.post-follow
+  text-align: right
+
+// YOUTUBE EMBED
+
+.video-holder
+  position: relative
+  padding-top: 26px
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+
+.youtube-player
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+// MEDIA QUERIES
+@media screen and (max-width: ($col * $cols)+($gutter * $cols))
+
+  $gutter = 16px
+  $margin-tiny = ($gutter/2)
+  $margin-small = $gutter
+  $margin-basic = ($gutter*3)
+  $margin-large = ($gutter*5)
+
+  // INDEX
+
+  .post
+    margin-bottom: $margin-basic
+    padding-bottom: $margin-small
+
+  .post-header
+    margin-bottom: $margin-small
+
+  .post-title-index
+    padding: $margin-small
+
+  #pagination
+    margin: $margin-basic 0
+
+  // HOME
+
+  .home-novaramedia
+    padding: $margin-basic 0
+    margin: $margin-small 0 $margin-basic 0
+
+  .novara-posts-title
+    margin-bottom: $margin-basic
+
+  .novara-post-title
+    margin-top: $margin-small
+
+  // SINGLE POST
+
+  .post-author
+    margin-top: $margin-small
+
+  #single-post-social
+    padding-top: $margin-basic
+
+  .list-posts
+    margin-top: $margin-small
+    li
+      margin-bottom: $margin-small
+
+  #single-post-footer
+  	margin: $margin-basic 0
+
+  .single-post-footer-social
+    margin-bottom: $margin-basic
+
+@media screen and (max-width: 1152px)
+
+  $gutter = 12px
+  $margin-tiny = ($gutter/2)
+  $margin-small = $gutter
+  $margin-basic = ($gutter*3)
+  $margin-large = ($gutter*5)
+
+  // INDEX
+
+  .post
+    margin-bottom: $margin-basic
+    padding-bottom: $margin-small
+
+  .post-header
+    margin-bottom: $margin-small
+
+  .post-title-index
+    padding: $margin-small
+
+  #pagination
+    margin: $margin-basic 0
+
+  // HOME
+
+  .home-novaramedia
+    padding: $margin-basic 0
+    margin: $margin-small 0 $margin-basic 0
+
+  .novara-posts-title
+    margin-bottom: $margin-basic
+
+  .novara-post-title
+    margin-top: $margin-small
+
+  // SINGLE POST
+
+  .post-author
+    margin-top: $margin-small
+
+  #single-post-social
+    padding-top: $margin-basic
+
+  .list-posts
+    margin-top: $margin-small
+    li
+      margin-bottom: $margin-small
+
+  #single-post-footer
+  	margin: $margin-basic 0
+
+  .single-post-footer-social
+    margin-bottom: $margin-basic
+
+
+@media screen and (max-width: 912px)
+
+  $gutter = 8px
+  $margin-tiny = ($gutter/2)
+  $margin-small = $gutter
+  $margin-basic = ($gutter*3)
+  $margin-large = ($gutter*5)
+
+  // INDEX
+
+  .post
+    margin-bottom: $margin-basic
+    padding-bottom: $margin-small
+
+  .post-header
+    margin-bottom: $margin-small
+
+  .post-title-index
+    padding: $margin-small
+
+  #pagination
+    margin: $margin-basic 0
+
+  // HOME
+
+  .home-novaramedia
+    padding: $margin-basic 0
+    margin: $margin-small 0 $margin-basic 0
+
+  .novara-posts-title
+    margin-bottom: $margin-basic
+
+  .novara-post-title
+    margin-top: $margin-small
+
+  // SINGLE POST
+
+  .post-author
+    margin-top: $margin-small
+
+  #single-post-social
+    padding-top: $margin-basic
+
+  .list-posts
+    margin-top: $margin-small
+    li
+      margin-bottom: $margin-small
+
+  #single-post-footer
+  	margin: $margin-basic 0
+
+  .single-post-footer-social
+    margin-bottom: $margin-basic
+
+
+@media screen and (max-width: 696px)
+
+  $gutter = 8px
+  $margin-tiny = ($gutter/2)
+  $margin-small = $gutter
+  $margin-basic = ($gutter*3)
+  $margin-large = ($gutter*5)
+
+  // INDEX
+
+  .post
+    margin-bottom: $margin-basic
+    padding-bottom: $margin-small
+
+  .post-header
+    margin-bottom: $margin-small
+
+  .post-title-index
+    padding: $margin-small
+
+  #pagination
+    margin: $margin-basic 0
+
+  // HOME
+
+  .home-novaramedia
+    padding: $margin-basic 0
+    margin: $margin-small 0 $margin-basic 0
+
+  .novara-posts-title
+    margin-bottom: $margin-basic
+
+  .novara-post-title
+    margin-top: $margin-small
+
+  // SINGLE POST
+
+  .post-author
+    margin-top: $margin-small
+
+  #single-post-social
+    padding-top: $margin-basic
+
+  #single-post-copy
+    margin-top: 0
+
+  .list-posts
+    margin-top: $margin-small
+    li
+      margin-bottom: $margin-small
+
+  #single-post-footer
+  	margin: $margin-basic 0
+
+  .single-post-footer-social, .single-post-footer-meta
+    margin-bottom: $margin-basic
+    text-align: center
+    width: 100%
+    float: none
+
+  // INDEX?
+
+  .related-post
+    max-width: 366px
+
+  // HOME
+
+  .home-novaramedia .container
+    max-width: 355px
+
+  .home-novaramedia-post
+    margin-bottom: $margin-basic
+
+  // SINGLE POST
+
+  .font-readable
+    padding-left: $margin-tiny
+    padding-right: $margin-tiny
+    box-sizing: border-box
+
+  .single-post-social, .recent-posts
+    display: none
+
+  .single-post-social-mobile
+    display: block
+    margin-bottom: 0.5em
+
+  .related-posts
+    margin-top: 0 !important
+
+  .list-posts
+    max-width: 300px
+    margin: 0 auto
