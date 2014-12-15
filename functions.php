@@ -1,62 +1,26 @@
 <?php
 function my_scripts_method() {
-
-    /*
-    jquery loaded from cdn.js in footer.php with a local failsafe. or you can enqueue here:
-
-    wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js');
-    wp_enqueue_script('jquery','','','',true);
-    */
-
-    /*
-  wordpress includes quite a few js libs by default, here is the ui draggable
-  wp_enqueue_script( 'jquery-ui-draggable','','','',true );
-  */
-
-    $templateuri = get_template_directory_uri() . '/js/';
-
-  /* lib.js is to bundle plugins. my.js is your scripts. enqueue more files as needed */
-
-    $jslib = $templateuri."lib.js";
-    wp_enqueue_script( 'jslib', $jslib,'','',true);
-    $myscripts = $templateuri."my.min.js";
-    wp_enqueue_script( 'myscripts', $myscripts,'','',true);
-
-  /* enqueue stylesheet here. file does not exist until stylus file is processed */
-    wp_enqueue_style( 'site', get_stylesheet_directory_uri() . '/css/site.css' );
-
-  /*
-  if you are not using stylus delete the site enqueue and uncomment these:
-  wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_style( 'site', get_stylesheet_directory_uri() . '/resets.css' );
-  */
-
+  $templateuri = get_template_directory_uri() . '/js/';
+  $jslib = $templateuri."lib.js";
+  wp_enqueue_script( 'jslib', $jslib,'','',true);
+  $myscripts = $templateuri."my.min.js";
+  wp_enqueue_script( 'myscripts', $myscripts,'','',true);
+  wp_enqueue_style( 'site', get_stylesheet_directory_uri() . '/css/site.css' );
 }
 add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 if ( function_exists( 'add_theme_support' ) ) {
-    add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'post-thumbnails' );
 }
 if ( function_exists( 'add_image_size' ) ) {
   add_image_size( 'admin-thumb', 150, 150, false );
   add_image_size( 'opengraph', 400, 300, true );
-
   add_image_size( 'col12-index', 630, 300, true );
-
   add_image_size( 'single-background', 1200, 450, true );
-
   add_image_size( 'api-large', 630, 355, true );
   add_image_size( 'api-medium', 355, 200, true );
 }
 
-
-/*
-override wp default gallery
-get_template_part( 'lib/gallery' );
-*/
-
-get_template_part( 'lib/post-types' );
 get_template_part( 'lib/meta-boxes' );
 
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
