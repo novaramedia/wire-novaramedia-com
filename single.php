@@ -122,7 +122,7 @@ if (!empty($meta['_cmb_novara_related_1'][0])) {
   $novara1 = json_decode(file_get_contents('http://novaramedia.com/api/single/?permalink=' . $meta['_cmb_novara_related_1'][0]));
   echo '<li>';
   echo '	<a href="' . $novara1->permalink . '">';
-  echo '		<img src="' . $novara1->wirethumb . '">';
+  echo '		<img src="' . $novara1->thumb_medium . '">';
 	echo '	</a>';
 	echo '	<a href="' . $novara1->permalink . '">';
 	echo '		<h4>&#8605; ' . $novara1->title . '</h4>';
@@ -133,7 +133,7 @@ if (!empty($meta['_cmb_novara_related_1'][0])) {
   	$novara2 = json_decode(file_get_contents('http://novaramedia.com/api/single/?permalink=' . $meta['_cmb_novara_related_2'][0]));
   	echo '<li>';
   	echo '	<a href="' . $novara2->permalink . '">';
-  	echo '		<img src="' . $novara2->wirethumb . '">';
+  	echo '		<img src="' . $novara2->thumb_medium . '">';
   	echo '	</a>';
   	echo '	<a href="' . $novara2->permalink . '">';
   	echo '		<h4>&#8605; ' . $novara2->title . '</h4>';
@@ -145,7 +145,7 @@ if (!empty($meta['_cmb_novara_related_1'][0])) {
   	$novara3 = json_decode(file_get_contents('http://novaramedia.com/api/single/?permalink=' . $meta['_cmb_novara_related_3'][0]));
   	echo '<li>';
   	echo '	<a href="' . $novara3->permalink . '">';
-  	echo '		<img src="' . $novara3->wirethumb . '">';
+  	echo '		<img src="' . $novara3->thumb_medium . '">';
   	echo '	</a>';
   	echo '	<a href="' . $novara3->permalink . '">';
   	echo '		<h4>&#8605; ' . $novara3->title . '</h4>';
