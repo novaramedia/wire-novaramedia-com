@@ -15,8 +15,13 @@ if ( function_exists( 'add_theme_support' ) ) {
 if ( function_exists( 'add_image_size' ) ) {
   add_image_size( 'admin-thumb', 150, 150, false );
   add_image_size( 'opengraph', 400, 300, true );
+
   add_image_size( 'col12-index', 630, 300, true );
+
+  add_image_size( 'col4-169', 192, 108, true );
+
   add_image_size( 'single-background', 1200, 450, true );
+
   add_image_size( 'api-large', 630, 355, true );
   add_image_size( 'api-medium', 355, 200, true );
 }

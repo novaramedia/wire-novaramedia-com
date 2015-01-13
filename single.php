@@ -68,7 +68,7 @@ if (!empty($meta['_cmb_author'][0]) && !empty($meta['_cmb_author_twitter'][0])) 
 						?>
   						<li>
   						  <a href="<?php the_permalink() ?>">
-                  <?php the_post_thumbnail('col4-grid'); ?>
+                  <?php the_post_thumbnail('col4-169'); ?>
   						  </a>
                 <a href="<?php the_permalink() ?>">
                   <h4>&#8605; <?php the_title(); ?></h4>
@@ -177,7 +177,7 @@ if( $my_query->have_posts() ) {
 ?>
 		<li id="related-post-<?php the_ID(); ?>">
 				<a href="<?php the_permalink() ?>">
-					<?php the_post_thumbnail('col3-169'); ?>
+					<?php the_post_thumbnail('col4-169'); ?>
 				</a>
 				<a href="<?php the_permalink() ?>">
 					<h4>&#8605; <?php echo $post->post_title; ?></h4>
