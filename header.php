@@ -7,14 +7,14 @@
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" value="@novaramedia">
   <?php if (have_posts()):while(have_posts()):the_post();
     $excerpt = get_the_excerpt();
     if(has_post_thumbnail()) {
       $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'opengraph' );
     }
-    $author = get_post_meta($post-ID, '_cmb_author_twitter', true);
+    $author = get_post_meta($post->ID, '_cmb_author_twitter', true);
     endwhile; endif;
     if (!empty($thumb)) {
   ?>
