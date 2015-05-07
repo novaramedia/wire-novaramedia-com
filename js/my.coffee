@@ -48,5 +48,6 @@ jQuery(document).ready ($) ->
 layoutRelated = ->
   relatedPostsH = relatedPosts.height()
   postCopyH = postCopy.height()
-  relatedPosts.css 'margin-top', (postCopyH-relatedPostsH)+'px'
-  return
+  marginTop = (postCopyH-relatedPostsH)
+  if marginTop > 0
+    relatedPosts.css 'margin-top', (marginTop)+'px'
