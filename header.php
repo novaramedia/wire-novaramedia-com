@@ -99,7 +99,8 @@
     <div class="row">
       <div class="col col8">
         <ul class="u-inline-list">
-<!--           <li><a href="<?php echo home_url('about/'); ?>">About</a></li> -->
+          <li><a href="http://novaramedia.com/about">About</a></li>
+          <li><a href="http://support.novaramedia.com">Support Us</a></li>
           <li><a class="u-pointer js-toggle-tags">Tags</a></li>
         </ul>
       </div>
